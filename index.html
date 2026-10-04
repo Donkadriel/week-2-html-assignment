@@ -4,19 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/index.css">
 </head>
 <body>
-    <form action="">
+    <form action="/register" method="post">
         <label for="name">Full Name:</label>
-        <input type="text" placeholder="Enter your name" id="name" name="name">
+        <input type="text" placeholder="Enter your name">
+        <br>
+
         <label for="email">Email:</label>
-        <input type="email" placeholder="Enter your email" id="email" name="email" required>
+        <input type="email" placeholder="Enter your email" required>
+        <br>
+
+        <label for="password">Password:</label>
+        <input type="password">
+        <br>
+
         <label for="gender">Gender</label>
-        <select name="gender" id="gender">
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-            <option value="other">Other</option>
+        <input type="radio" name="gender">Male
+        <input type="radio" name="gender">Female
+        <br>
+        <label for="country" >Country:</label>
+        <select name="country" id="country">
+            <option value="Nigeria">Nigeria</option>
+            <option value="Ghana">Ghana</option>
+            <option value="Kenya">Kenya</option>
+            <option value="SouthAfrica">South Africa</option>
         </select>
+        <br>
+
+        <label for="about">About yourself:</label>
+        <br>
+        <textarea name="" id="" placeholder="Tell us a little about yourself"></textarea>
+        <br>
+        <p>Terms and Conditions</p>
+        <input type="checkbox"><label for=""> I agree to the terms and conditions</label>
+        <br>
+
+        <button type="submit">Submit</button>
     </form>
+
+    <form action="/search" method="get">
+        <input type="text" placeholder="search">
+        <button>search</button>
+    </form>
+
+    <br>
+    <br>
+
+    <div>
+        <h2>1. Action</h2>
+        <p>Specifies where the form data should be sent when the form is submitted</p>
+
+        <h2>2. Method</h2>
+        <p>Specifies how the form data is submitted</p>
+        <br>
+
+        <p>The GET method is commonly used because the search query becomes part of the URL</p>
+        <p>POST might be used in a registration form because it submits data for processing or update</p>
+        <p>NO, using POST does not make information automatically secure because HTTPS is required to protect the data</p>
+    </div>
 </body>
 </html>
